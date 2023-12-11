@@ -1,4 +1,4 @@
-import 'package:doi/package.dart';
+import 'package:hack_vt/package.dart';
 
 Future<void> mqttPublish({required bool message, required String topic}) async {
   final jsonString = jsonEncode(message);
