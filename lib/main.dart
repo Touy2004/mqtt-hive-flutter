@@ -1,5 +1,4 @@
 // main.dart
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:hack_vt/package.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -8,9 +7,6 @@ Future<void> main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(SensorDataAdapter());
   await Hive.openBox<SensorData>('sensorData');
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  FlutterNativeSplash.remove();
   runApp(const Myapp());
   
 }
